@@ -12,7 +12,7 @@ export default function ContactPage() {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  /*const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus('sending')
 
@@ -32,7 +32,24 @@ export default function ContactPage() {
     // Demo: simulate sending
     await new Promise(r => setTimeout(r, 1200))
     setStatus('sent')
+  }*/
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setStatus('sending')
+
+  const res = await fetch('https://formspree.io/f/xwvzajyd', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(form),
+  })
+
+  if (res.ok) {
+    setStatus('sent')
+  } else {
+    setStatus('error')
   }
+}
 
   const inputClass = "w-full bg-[#111] border border-[#1e1e1e] text-white placeholder-[#444] px-4 py-3 text-sm focus:outline-none focus:border-[#C8102E] transition-colors"
 
