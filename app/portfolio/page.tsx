@@ -148,7 +148,7 @@ const allWorks = [
   {
     id: 7,
     type: 'poster',
-    src: '/portfolio/p3.jpeg',
+    src: '/portfolio/p3.jpg',
     title: 'Your Brand Deserves Better Content',
     category: 'Design',
     desc: 'Promotional poster — bold concept with strong visual hierarchy.',
@@ -156,7 +156,7 @@ const allWorks = [
   {
     id: 8,
     type: 'poster',
-    src: '/portfolio/p4.jpeg',
+    src: '/portfolio/p4.jpg',
     title: 'Your Brand Deserves Better Content',
     category: 'Design',
     desc: 'Promotional poster — bold concept with strong visual hierarchy.',
