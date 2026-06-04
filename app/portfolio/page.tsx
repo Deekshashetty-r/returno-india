@@ -115,7 +115,7 @@ const allWorks = [
   {
     id: 3,
     type: 'video',
-    src: '/portfolio/v1.mp4',
+    src: 'https://res.cloudinary.com/dc4rdb6qg/video/upload/q_auto/f_auto/v1780561727/v1_sy6zpl.mp4',
     title: 'Brand Reel',
     category: 'Video',
     desc: 'Short-form brand awareness reel.',
@@ -124,7 +124,7 @@ const allWorks = [
   {
     id: 4,
     type: 'video',
-    src: '/portfolio/v2.mp4',
+    src: 'https://res.cloudinary.com/dc4rdb6qg/video/upload/q_auto/f_auto/v1780561741/v2_f3wo3b.mp4',
     title: 'Brand Reel',
     category: 'Video',
     desc: 'Promotion',
@@ -132,7 +132,7 @@ const allWorks = [
   {
     id: 5,
     type: 'video',
-    src: '/portfolio/v3.mp4',
+    src: 'https://res.cloudinary.com/dc4rdb6qg/video/upload/q_auto/f_auto/v1780561743/v3_dt5uqm.mp4',
     title: 'Brand Reel',
     category: 'Video',
     desc: 'Promotion',
@@ -140,7 +140,7 @@ const allWorks = [
   {
     id: 6,
     type: 'video',
-    src: '/portfolio/v4.mp4',
+    src: 'https://res.cloudinary.com/dc4rdb6qg/video/upload/q_auto/f_auto/v1780561733/v4_kksvp9.mp4',
     title: 'Brand Reel',
     category: 'Video',
     desc: 'Promotion',
@@ -164,7 +164,7 @@ const allWorks = [
   {
     id: 9,
     type: 'video',
-    src: '/portfolio/v5.mp4',
+    src: 'https://res.cloudinary.com/dc4rdb6qg/video/upload/q_auto/f_auto/v1780561736/v5_ztgk5w.mp4',
     title: 'Brand Reel',
     category: 'Video',
     desc: 'Promotion',
