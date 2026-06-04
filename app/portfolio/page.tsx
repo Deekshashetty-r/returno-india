@@ -145,6 +145,30 @@ const allWorks = [
     category: 'Video',
     desc: 'Promotion',
   },
+  {
+    id: 7,
+    type: 'poster',
+    src: '/portfolio/p3.jpeg',
+    title: 'Your Brand Deserves Better Content',
+    category: 'Design',
+    desc: 'Promotional poster — bold concept with strong visual hierarchy.',
+  },
+  {
+    id: 8,
+    type: 'poster',
+    src: '/portfolio/p4.jpeg',
+    title: 'Your Brand Deserves Better Content',
+    category: 'Design',
+    desc: 'Promotional poster — bold concept with strong visual hierarchy.',
+  },
+  {
+    id: 9,
+    type: 'video',
+    src: '/portfolio/v5.mp4',
+    title: 'Brand Reel',
+    category: 'Video',
+    desc: 'Promotion',
+  },
 ]
 
 export default function PortfolioPage() {
