@@ -25,6 +25,13 @@ const team = [
   initials: 'DS',
   color: '#1e1e1e',
 },
+{
+  name: 'Sheron',
+  role: 'Video Shooting & Editing Support',
+  bio: 'Transforms ideas into compelling visuals through creative shooting and content support.',
+  initials: 'SH',
+  color: '#2a2a2a',
+},
 ]
 
 export default function TeamPage() {
