@@ -110,7 +110,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </div>
                 </a>
 
-                <a href="https://instagram.com/returnoofficial45" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.instagram.com/returnomedia?utm_source=qr&igsh=Zm5xZmlxa3JicXhy" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-[#111] border border-[#1e1e1e] card-hover group">
                   <div className="w-10 h-10 bg-[#C8102E]/10 flex items-center justify-center group-hover:bg-[#C8102E]/20 transition-colors">
                     <Instagram size={16} className="text-[#C8102E]" />

@@ -79,7 +79,7 @@ export default function TeamPage() {
                     className="text-[#555] hover:text-[#C8102E] transition-colors">
                     <Linkedin size={18} />
                   </a>
-                  <a href="https://instagram.com/returnoofficial45" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.instagram.com/returnomedia?utm_source=qr&igsh=Zm5xZmlxa3JicXhy" target="_blank" rel="noopener noreferrer"
                     className="text-[#555] hover:text-[#C8102E] transition-colors">
                     <Instagram size={18} />
                   </a>
