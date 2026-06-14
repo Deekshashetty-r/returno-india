@@ -121,7 +121,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </div>
                 </a>
 
-                <a href="https://linkedin.com/company/returno-india" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/returno-india-8646333b0/" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-[#111] border border-[#1e1e1e] card-hover group">
                   <div className="w-10 h-10 bg-[#C8102E]/10 flex items-center justify-center group-hover:bg-[#C8102E]/20 transition-colors">
                     <Linkedin size={16} className="text-[#C8102E]" />

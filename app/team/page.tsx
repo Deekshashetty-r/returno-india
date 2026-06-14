@@ -75,7 +75,7 @@ export default function TeamPage() {
               <div className="lg:col-span-2">
                 <p className="text-[#888] leading-relaxed mb-6">{team[0].bio}</p>
                 <div className="flex items-center gap-4">
-                  <a href="https://linkedin.com/company/returno-india" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.linkedin.com/in/returno-india-8646333b0/" target="_blank" rel="noopener noreferrer"
                     className="text-[#555] hover:text-[#C8102E] transition-colors">
                     <Linkedin size={18} />
                   </a>
