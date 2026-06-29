@@ -210,10 +210,3 @@ export const metadata: Metadata = {
 
 ---
 
-## SUPPORT
-
-Need help with deployment or customization? Contact:
-kishakumar062006@gmail.com | +91 87925 47821
-=======
-# returno-india
->>>>>>> cbdd12ca693e4bf5030ebd35f97f62b2a260352b
