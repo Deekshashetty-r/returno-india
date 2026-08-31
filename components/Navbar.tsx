@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
+import BrandLogo from './BrandLogo'
 
 const links = [
   { href: '/', label: 'Home' },
@@ -30,22 +31,13 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[#0a0a0a]/95 backdrop-blur-md border-b border-[#1e1e1e]'
+          ? 'bg-black/90 backdrop-blur-md border-b border-white/[0.08]'
           : 'bg-transparent'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <span className="w-6 h-6 bg-[#C8102E] flex items-center justify-center text-white text-xs font-bold font-display">
-            R
-          </span>
-          <span className="font-display font-bold text-white text-lg tracking-tight">
-          Returno India<span className="text-[#C8102E]">.</span>
-           </span>
-        </Link>
+        <BrandLogo />
 
-        {/* Desktop Links */}
         <ul className="hidden md:flex items-center gap-8">
           {links.map(({ href, label }) => (
             <li key={href}>
@@ -53,30 +45,28 @@ export default function Navbar() {
                 href={href}
                 className={`text-sm font-body tracking-wide transition-colors duration-200 ${
                   pathname === href
-                    ? 'text-white'
-                    : 'text-[#888] hover:text-white'
+                    ? 'text-[#F8F9F9]'
+                    : 'text-[#9496A1] hover:text-[#F8F9F9]'
                 }`}
               >
                 {label}
                 {pathname === href && (
-                  <span className="block h-px bg-[#C8102E] mt-0.5" />
+                  <span className="block h-px bg-[#0084FF] mt-0.5" />
                 )}
               </Link>
             </li>
           ))}
         </ul>
 
-        {/* CTA */}
         <Link
           href="/contact"
           className="hidden md:inline-flex btn-primary text-xs py-2.5 px-5"
         >
-          Get Started
+          Get in Touch
         </Link>
 
-        {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white p-1"
+          className="md:hidden text-[#F8F9F9] p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -84,9 +74,8 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden bg-[#0d0d0d] border-b border-[#1e1e1e] ${
+        className={`md:hidden transition-all duration-300 overflow-hidden bg-[#121318] border-b border-white/[0.08] ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -96,7 +85,7 @@ export default function Navbar() {
               <Link
                 href={href}
                 className={`text-sm tracking-wide ${
-                  pathname === href ? 'text-white' : 'text-[#888]'
+                  pathname === href ? 'text-[#F8F9F9]' : 'text-[#9496A1]'
                 }`}
               >
                 {label}
@@ -105,7 +94,7 @@ export default function Navbar() {
           ))}
           <li>
             <Link href="/contact" className="btn-primary text-xs py-2.5 px-5 mt-2 w-fit">
-              Get Started
+              Get in Touch
             </Link>
           </li>
         </ul>

@@ -5,19 +5,19 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Returno India — Business Growth & Digital Support Agency',
-  description: 'Returno India helps modern businesses build better digital presence through content, social media, creative support, and business growth solutions.',
-  keywords: 'digital marketing, social media management, content creation, business growth, branding, India',
+  title: 'VYOM Studio — Where Ideas Go Beyond',
+  description: 'VYOM Studio is a data-driven creative digital agency. We transform progressive brands through high-impact branding, intelligent web solutions, and strategic content creation.',
+  keywords: 'VYOM Studio, branding, digital marketing, content creation, web development, digital agency',
   openGraph: {
-    title: 'Returno India',
-    description: 'Building Better Digital Presence for Modern Businesses',
+    title: 'VYOM Studio',
+    description: 'Where Ideas Go Beyond. Branding, digital marketing, content creation, and web development.',
     type: 'website',
     locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Returno India',
-    description: 'Building Better Digital Presence for Modern Businesses',
+    title: 'VYOM Studio',
+    description: 'Where Ideas Go Beyond.',
   },
 }
 

@@ -51,19 +51,20 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 }
 
-  const inputClass = "w-full bg-[#111] border border-[#1e1e1e] text-white placeholder-[#444] px-4 py-3 text-sm focus:outline-none focus:border-[#C8102E] transition-colors"
+  const inputClass = "w-full bg-white/[0.04] border border-white/[0.08] text-[#F8F9F9] placeholder-[#9496A1] px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-[#0084FF] transition-colors"
 
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-20 border-b border-[#1e1e1e]">
-        <div className="absolute right-0 bottom-0 w-96 h-96 bg-[#C8102E] rounded-full opacity-[0.04] blur-[120px] pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="relative pt-36 pb-20 border-b border-white/[0.08]">
+        <div className="glow-backdrop" />
+        <div className="absolute right-0 bottom-0 w-96 h-96 bg-[#1E40AF] rounded-full opacity-[0.2] blur-[120px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative">
           <span className="accent-line" />
-          <h1 className="font-display text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          <h1 className="font-display text-5xl lg:text-7xl font-bold text-[#F8F9F9] leading-tight mb-6">
             Let's Talk
           </h1>
-          <p className="text-[#888] text-xl max-w-lg leading-relaxed">
+          <p className="text-[#9496A1] text-xl max-w-lg leading-relaxed">
             Have a project in mind? Ready to grow your digital presence? We'd love to hear from you.
           </p>
         </div>
@@ -78,10 +79,10 @@ const handleSubmit = async (e: React.FormEvent) => {
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <span className="accent-line" />
-                <h2 className="animate-on-scroll font-display text-3xl font-bold text-white mb-4">
+                <h2 className="animate-on-scroll font-display text-3xl font-bold text-[#F8F9F9] mb-4">
                   Get in Touch
                 </h2>
-                <p className="animate-on-scroll text-[#888] text-sm leading-relaxed">
+                <p className="animate-on-scroll text-[#9496A1] text-sm leading-relaxed">
                   Whether you're looking for a full-service partner or need support in a specific area — we're here to help. Drop us a message and we'll get back to you within 24 hours.
                 </p>
               </div>
@@ -89,53 +90,53 @@ const handleSubmit = async (e: React.FormEvent) => {
               {/* Contact Details */}
               <div className="animate-on-scroll delay-100 space-y-4">
                 <a href="tel:8792547821"
-                  className="flex items-center gap-4 p-4 bg-[#111] border border-[#1e1e1e] card-hover group">
-                  <div className="w-10 h-10 bg-[#C8102E]/10 flex items-center justify-center group-hover:bg-[#C8102E]/20 transition-colors">
-                    <Phone size={16} className="text-[#C8102E]" />
+                  className="flex items-center gap-4 p-4 service-card group">
+                  <div className="w-10 h-10 bg-[#0084FF]/10 flex items-center justify-center rounded-xl group-hover:bg-[#0084FF]/20 transition-colors">
+                    <Phone size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#666] text-xs uppercase tracking-wide mb-0.5">Phone</div>
-                    <div className="text-white text-sm">+91 87925 47821</div>
+                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">Phone</div>
+                    <div className="text-[#F8F9F9] text-sm">+91 87925 47821</div>
                   </div>
                 </a>
 
                 <a href="mailto:kishakumar062006@gmail.com"
-                  className="flex items-center gap-4 p-4 bg-[#111] border border-[#1e1e1e] card-hover group">
-                  <div className="w-10 h-10 bg-[#C8102E]/10 flex items-center justify-center group-hover:bg-[#C8102E]/20 transition-colors">
-                    <Mail size={16} className="text-[#C8102E]" />
+                  className="flex items-center gap-4 p-4 service-card group">
+                  <div className="w-10 h-10 bg-[#0084FF]/10 flex items-center justify-center rounded-xl group-hover:bg-[#0084FF]/20 transition-colors">
+                    <Mail size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#666] text-xs uppercase tracking-wide mb-0.5">Email</div>
-                    <div className="text-white text-sm break-all">kishakumar062006@gmail.com</div>
+                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">Email</div>
+                    <div className="text-[#F8F9F9] text-sm break-all">kishakumar062006@gmail.com</div>
                   </div>
                 </a>
 
                 <a href="https://www.instagram.com/returnomedia?utm_source=qr&igsh=Zm5xZmlxa3JicXhy" target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-[#111] border border-[#1e1e1e] card-hover group">
-                  <div className="w-10 h-10 bg-[#C8102E]/10 flex items-center justify-center group-hover:bg-[#C8102E]/20 transition-colors">
-                    <Instagram size={16} className="text-[#C8102E]" />
+                  className="flex items-center gap-4 p-4 service-card group">
+                  <div className="w-10 h-10 bg-[#0084FF]/10 flex items-center justify-center rounded-xl group-hover:bg-[#0084FF]/20 transition-colors">
+                    <Instagram size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#666] text-xs uppercase tracking-wide mb-0.5">Instagram</div>
-                    <div className="text-white text-sm">@returnoofficial45</div>
+                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">Instagram</div>
+                    <div className="text-[#F8F9F9] text-sm">@returnoofficial45</div>
                   </div>
                 </a>
 
                 <a href="https://www.linkedin.com/in/returno-india-8646333b0/" target="_blank" rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-[#111] border border-[#1e1e1e] card-hover group">
-                  <div className="w-10 h-10 bg-[#C8102E]/10 flex items-center justify-center group-hover:bg-[#C8102E]/20 transition-colors">
-                    <Linkedin size={16} className="text-[#C8102E]" />
+                  className="flex items-center gap-4 p-4 service-card group">
+                  <div className="w-10 h-10 bg-[#0084FF]/10 flex items-center justify-center rounded-xl group-hover:bg-[#0084FF]/20 transition-colors">
+                    <Linkedin size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#666] text-xs uppercase tracking-wide mb-0.5">LinkedIn</div>
-                    <div className="text-white text-sm">Returno India</div>
+                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">LinkedIn</div>
+                    <div className="text-[#F8F9F9] text-sm">VYOM Studio</div>
                   </div>
                 </a>
               </div>
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/918792547821?text=Hi%20Returno%20India%2C%20I%27m%20interested%20in%20your%20services."
+                href="https://wa.me/918792547821?text=Hi%20VYOM%20Studio%2C%20I%27m%20interested%20in%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="animate-on-scroll delay-200 w-full flex items-center justify-center gap-3 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] py-4 text-sm font-medium hover:bg-[#25D366]/20 transition-colors"
@@ -149,19 +150,19 @@ const handleSubmit = async (e: React.FormEvent) => {
 
             {/* Form */}
             <div className="lg:col-span-3">
-              <div className="animate-on-scroll bg-[#0d0d0d] border border-[#1e1e1e] p-8 lg:p-10">
-                <h3 className="font-display text-2xl font-bold text-white mb-8">Send Us a Message</h3>
+              <div className="animate-on-scroll service-card p-8 lg:p-10">
+                <h3 className="font-display text-2xl font-bold text-[#F8F9F9] mb-8">Send Us a Message</h3>
 
                 {status === 'sent' ? (
                   <div className="text-center py-16">
-                    <div className="w-14 h-14 bg-[#C8102E]/10 flex items-center justify-center mx-auto mb-4">
-                      <Send size={24} className="text-[#C8102E]" />
+                    <div className="w-14 h-14 bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-4 rounded-xl">
+                      <Send size={24} className="text-[#0084FF]" />
                     </div>
-                    <h4 className="font-display text-2xl font-bold text-white mb-2">Message Sent!</h4>
-                    <p className="text-[#888] text-sm">We'll get back to you within 24 hours.</p>
+                    <h4 className="font-display text-2xl font-bold text-[#F8F9F9] mb-2">Message Sent!</h4>
+                    <p className="text-[#9496A1] text-sm">We'll get back to you within 24 hours.</p>
                     <button
                       onClick={() => { setStatus('idle'); setForm({ name: '', email: '', phone: '', service: '', message: '' }) }}
-                      className="mt-6 text-sm text-[#C8102E] hover:underline"
+                      className="mt-6 text-sm text-[#0084FF] hover:underline"
                     >
                       Send another message
                     </button>
@@ -170,7 +171,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[#666] text-xs uppercase tracking-wide block mb-1.5">Name *</label>
+                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Name *</label>
                         <input
                           name="name"
                           value={form.name}
@@ -181,7 +182,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         />
                       </div>
                       <div>
-                        <label className="text-[#666] text-xs uppercase tracking-wide block mb-1.5">Email *</label>
+                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Email *</label>
                         <input
                           name="email"
                           type="email"
@@ -196,7 +197,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[#666] text-xs uppercase tracking-wide block mb-1.5">Phone</label>
+                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Phone</label>
                         <input
                           name="phone"
                           type="tel"
@@ -207,7 +208,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         />
                       </div>
                       <div>
-                        <label className="text-[#666] text-xs uppercase tracking-wide block mb-1.5">Service Interested In</label>
+                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Service Interested In</label>
                         <select
                           name="service"
                           value={form.service}
@@ -215,20 +216,17 @@ const handleSubmit = async (e: React.FormEvent) => {
                           className={inputClass + ' cursor-pointer'}
                         >
                           <option value="">Select a service</option>
-                          <option value="social-media">Social Media Management</option>
-                          <option value="content">Content Creation & Reels</option>
-                          <option value="design">Creative Design Support</option>
-                          <option value="promo">Promotional Content</option>
-                          <option value="website">Website Support</option>
-                          <option value="growth">Business Growth Support</option>
-                          <option value="ops">Operational Coordination</option>
+                          <option value="branding">Branding</option>
+                          <option value="digital-marketing">Digital Marketing</option>
+                          <option value="content">Content Creation</option>
+                          <option value="web">Web Development</option>
                           <option value="other">Other / Not Sure</option>
                         </select>
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-[#666] text-xs uppercase tracking-wide block mb-1.5">Message *</label>
+                      <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Message *</label>
                       <textarea
                         name="message"
                         value={form.message}

@@ -8,20 +8,22 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['var(--font-display)', 'serif'],
+        display: ['var(--font-display)', 'sans-serif'],
         body: ['var(--font-body)', 'sans-serif'],
       },
       colors: {
         accent: {
-          DEFAULT: '#C8102E',
-          light: '#e8274a',
-          dark: '#9a0c23',
+          DEFAULT: '#0084FF',
+          light: '#3b82f6',
+          dark: '#1E40AF',
+          neon: '#CCFF00',
+          purple: '#6745E7',
         },
         surface: {
-          DEFAULT: '#0a0a0a',
-          card: '#111111',
-          border: '#1e1e1e',
-          subtle: '#161616',
+          DEFAULT: '#0a0a0c',
+          card: '#121318',
+          border: 'rgba(255,255,255,0.08)',
+          subtle: '#121318',
         }
       },
       animation: {

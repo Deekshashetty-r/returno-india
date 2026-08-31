@@ -32,7 +32,7 @@ function VideoCard({ src, title, category }: { src: string; title: string; categ
 
   return (
     <div
-      className="relative bg-[#0d0d0d] border border-[#1e1e1e] overflow-hidden group card-hover cursor-pointer"
+      className="relative bg-[#121318] border border-white/[0.08] overflow-hidden group card-hover cursor-pointer"
       style={{ aspectRatio: '9/16', maxHeight: '520px' }}
       onClick={togglePlay}
     >
@@ -49,7 +49,7 @@ function VideoCard({ src, title, category }: { src: string; title: string; categ
       <div className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${playing ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`} />
 
       <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${playing ? 'opacity-0 group-hover:opacity-100' : 'opacity-100'}`}>
-        <div className="w-14 h-14 bg-[#C8102E] flex items-center justify-center rounded-full shadow-lg shadow-[#C8102E]/30 hover:scale-110 transition-transform">
+        <div className="w-14 h-14 bg-[#0084FF] flex items-center justify-center rounded-full shadow-lg shadow-[#0084FF]/30 hover:scale-110 transition-transform">
           {playing ? <Pause size={20} className="text-white" /> : <Play size={20} className="text-white ml-1" />}
         </div>
       </div>
@@ -62,7 +62,7 @@ function VideoCard({ src, title, category }: { src: string; title: string; categ
       </button>
 
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-        <span className="text-[#C8102E] text-xs tracking-widest uppercase block mb-0.5">{category}</span>
+        <span className="text-[#0084FF] text-xs tracking-widest uppercase block mb-0.5">{category}</span>
         <span className="text-white text-sm font-medium">{title}</span>
       </div>
     </div>
@@ -72,7 +72,7 @@ function VideoCard({ src, title, category }: { src: string; title: string; categ
 function PosterCard({ src, title, category, desc }: { src: string; title: string; category: string; desc: string }) {
   return (
     <div
-      className="relative bg-[#0d0d0d] border border-[#1e1e1e] overflow-hidden group card-hover"
+      className="relative bg-[#121318] border border-white/[0.08] overflow-hidden group card-hover"
       style={{ aspectRatio: '3/4' }}
     >
       <Image
@@ -88,7 +88,7 @@ function PosterCard({ src, title, category, desc }: { src: string; title: string
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-        <span className="text-[#C8102E] text-xs tracking-widest uppercase block mb-0.5">{category}</span>
+        <span className="text-[#0084FF] text-xs tracking-widest uppercase block mb-0.5">{category}</span>
         <span className="text-white text-sm font-medium">{title}</span>
       </div>
     </div>
@@ -180,20 +180,20 @@ export default function PortfolioPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-20 border-b border-[#1e1e1e]">
+      <section className="relative pt-36 pb-20 border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <span className="accent-line" />
-          <h1 className="font-display text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+          <h1 className="font-display text-5xl lg:text-7xl font-bold text-[#F8F9F9] leading-tight mb-6">
             Our Work
           </h1>
-          <p className="text-[#888] text-xl max-w-xl leading-relaxed">
+          <p className="text-[#9496A1] text-xl max-w-xl leading-relaxed">
             Real projects — posters, videos, reels, and creative content we've built for brands.
           </p>
         </div>
       </section>
 
       {/* Filter */}
-      <section className="sticky top-16 lg:top-20 z-30 bg-[#0a0a0a]/95 backdrop-blur border-b border-[#1e1e1e]">
+      <section className="sticky top-16 lg:top-20 z-30 bg-black/90 backdrop-blur border-b border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex gap-3 overflow-x-auto">
           {categories.map((cat) => (
             <button
@@ -201,8 +201,8 @@ export default function PortfolioPage() {
               onClick={() => setActive(cat)}
               className={`flex-shrink-0 text-xs tracking-widest uppercase px-4 py-2 transition-all duration-200 ${
                 active === cat
-                  ? 'bg-[#C8102E] text-white'
-                  : 'text-[#666] border border-[#1e1e1e] hover:text-white hover:border-white/20'
+                  ? 'bg-[#CCFF00] text-black rounded-full font-semibold'
+                  : 'text-[#9496A1] border border-white/[0.08] hover:text-[#F8F9F9] hover:border-white/20 rounded-full'
               }`}
             >
               {cat}
@@ -227,25 +227,25 @@ export default function PortfolioPage() {
           </div>
 
           {filtered.length === 0 && (
-            <div className="text-center py-20 text-[#666]">No projects in this category yet.</div>
+            <div className="text-center py-20 text-[#9496A1]">No projects in this category yet.</div>
           )}
         </div>
       </section>
 
       {/* More coming soon */}
-      <section className="py-10 border-t border-[#1e1e1e]">
+      <section className="py-10 border-t border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-          <p className="text-[#444] text-sm tracking-widest uppercase">More work being added soon</p>
+          <p className="text-[#9496A1] text-sm tracking-widest uppercase">More work being added soon</p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-pad bg-[#080808] border-t border-[#1e1e1e] text-center">
+      <section className="section-pad bg-[#0a0a0c] border-t border-white/[0.08] text-center">
         <div className="max-w-2xl mx-auto px-6">
-          <h2 className="animate-on-scroll font-display text-4xl font-bold text-white mb-6">
+          <h2 className="animate-on-scroll font-display text-4xl font-bold text-[#F8F9F9] mb-6">
             Want Work Like This?
           </h2>
-          <p className="animate-on-scroll delay-100 text-[#888] mb-8">
+          <p className="animate-on-scroll delay-100 text-[#9496A1] mb-8">
             Reach out and let's create something great together.
           </p>
           <Link href="/contact" className="animate-on-scroll delay-200 btn-primary inline-flex">
