@@ -76,11 +76,11 @@ export default function TeamPage() {
               <div className="lg:col-span-2">
                 <p className="text-[#9496A1] leading-relaxed mb-6">{team[0].bio}</p>
                 <div className="flex items-center gap-4">
-                  <a href="https://www.linkedin.com/in/returno-india-8646333b0/" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.linkedin.com/in/vyom-studio-8646333b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer"
                     className="text-[#9496A1] hover:text-[#0084FF] transition-colors">
                     <Linkedin size={18} />
                   </a>
-                  <a href="https://www.instagram.com/returnomedia?utm_source=qr&igsh=Zm5xZmlxa3JicXhy" target="_blank" rel="noopener noreferrer"
+                  <a href="https://www.instagram.com/vyomstudio.in?utm_source=qr&igsi=Zm5xZmlxa3JicXhy" target="_blank" rel="noopener noreferrer"
                     className="text-[#9496A1] hover:text-[#0084FF] transition-colors">
                     <Instagram size={18} />
                   </a>

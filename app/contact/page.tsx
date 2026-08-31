@@ -111,18 +111,18 @@ const handleSubmit = async (e: React.FormEvent) => {
                   </div>
                 </a>
 
-                <a href="https://www.instagram.com/returnomedia?utm_source=qr&igsh=Zm5xZmlxa3JicXhy" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.instagram.com/vyomstudio.in?utm_source=qr&igsi=Zm5xZmlxa3JicXhy" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 service-card group">
                   <div className="w-10 h-10 bg-[#0084FF]/10 flex items-center justify-center rounded-xl group-hover:bg-[#0084FF]/20 transition-colors">
                     <Instagram size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
                     <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">Instagram</div>
-                    <div className="text-[#F8F9F9] text-sm">@returnoofficial45</div>
+                    <div className="text-[#F8F9F9] text-sm">@vyomstudio.in</div>
                   </div>
                 </a>
 
-                <a href="https://www.linkedin.com/in/returno-india-8646333b0/" target="_blank" rel="noopener noreferrer"
+                <a href="https://www.linkedin.com/in/vyom-studio-8646333b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 service-card group">
                   <div className="w-10 h-10 bg-[#0084FF]/10 flex items-center justify-center rounded-xl group-hover:bg-[#0084FF]/20 transition-colors">
                     <Linkedin size={16} className="text-[#0084FF]" />
