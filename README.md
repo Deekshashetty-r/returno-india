@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Returno India — Production Website
+# VyomStudio — Production Website
 
 Built with Next.js 14, Tailwind CSS, TypeScript. Deploy-ready for Vercel.
 
@@ -8,7 +7,7 @@ Built with Next.js 14, Tailwind CSS, TypeScript. Deploy-ready for Vercel.
 ## PROJECT STRUCTURE
 
 ```
-returno-india/
+VyomStudio/
 ├── app/
 │   ├── layout.tsx          ← Root layout (navbar, footer, SEO metadata)
 │   ├── globals.css         ← All base styles, fonts, animations
@@ -47,7 +46,7 @@ returno-india/
 
 ```bash
 # 1. Enter the project folder
-cd returno-india
+cd VyomStudio
 
 # 2. Install dependencies
 npm install
@@ -120,7 +119,7 @@ import Image from 'next/image'
 Place images in: `public/portfolio/filename.jpg`
 
 ### Update sitemap domain
-Edit `app/sitemap.ts` → replace `returnoindia.com` with your actual domain.
+Edit `app/sitemap.ts` → replace `vyomstudio.com` with your actual domain.
 
 ### Update robots.txt
 Edit `public/robots.txt` → replace `yourdomain.com` with your actual domain.
@@ -132,13 +131,13 @@ Edit `public/robots.txt` → replace `yourdomain.com` with your actual domain.
 ### A. Push to GitHub
 
 ```bash
-# Inside the returno-india folder:
+# Inside the VyomStudio folder:
 git init
 git add .
-git commit -m "Initial commit — Returno India website"
+git commit -m "Initial commit — VyomStudio website"
 
 # Create a new repo on github.com, then:
-git remote add origin https://github.com/YOUR_USERNAME/returno-india.git
+git remote add origin https://github.com/YOUR_USERNAME/VyomStudio.git
 git branch -M main
 git push -u origin main
 ```
@@ -146,7 +145,7 @@ git push -u origin main
 ### B. Deploy on Vercel
 
 1. Go to https://vercel.com → click **Add New Project**
-2. Click **Import Git Repository** → select `returno-india`
+2. Click **Import Git Repository** → select `VyomStudio`
 3. Vercel auto-detects Next.js → click **Deploy**
 4. Wait ~2 minutes → your site is live at `your-project.vercel.app`
 
@@ -158,7 +157,7 @@ That's it. Every time you `git push`, Vercel auto-redeploys.
 
 ### On Vercel:
 1. Go to your project → **Settings** → **Domains**
-2. Add your domain (e.g., `returnoindia.com`)
+2. Add your domain (e.g., `vyomstudio.com`)
 3. Vercel gives you DNS records to add
 
 ### On your domain registrar (GoDaddy, Namecheap, etc.):
@@ -210,3 +209,7 @@ export const metadata: Metadata = {
 
 ---
 
+## SUPPORT
+
+Need help with deployment or customization? Contact:
+kishakumar062006@gmail.com | +91 87925 47821
