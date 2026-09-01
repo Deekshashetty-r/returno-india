@@ -51,20 +51,20 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 }
 
-  const inputClass = "w-full bg-white/[0.04] border border-white/[0.08] text-[#F8F9F9] placeholder-[#9496A1] px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-[#0084FF] transition-colors"
+  const inputClass = "w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-blue-500 transition-colors"
 
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-36 pb-20 border-b border-white/[0.08]">
-        <div className="glow-backdrop" />
+      <section className="relative pt-36 pb-20 border-b border-gray-200">
+        <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white pointer-events-none" />
         <div className="absolute right-0 bottom-0 w-96 h-96 bg-[#1E40AF] rounded-full opacity-[0.2] blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative">
           <span className="accent-line" />
-          <h1 className="font-display text-5xl lg:text-7xl font-bold text-[#F8F9F9] leading-tight mb-6">
+          <h1 className="font-display text-5xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
             Let's Talk
           </h1>
-          <p className="text-[#9496A1] text-xl max-w-lg leading-relaxed">
+          <p className="text-gray-600 text-xl max-w-lg leading-relaxed">
             Have a project in mind? Ready to grow your digital presence? We'd love to hear from you.
           </p>
         </div>
@@ -79,10 +79,10 @@ const handleSubmit = async (e: React.FormEvent) => {
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <span className="accent-line" />
-                <h2 className="animate-on-scroll font-display text-3xl font-bold text-[#F8F9F9] mb-4">
+                <h2 className="animate-on-scroll font-display text-3xl font-bold text-gray-900 mb-4">
                   Get in Touch
                 </h2>
-                <p className="animate-on-scroll text-[#9496A1] text-sm leading-relaxed">
+                <p className="animate-on-scroll text-gray-600 text-sm leading-relaxed">
                   Whether you're looking for a full-service partner or need support in a specific area — we're here to help. Drop us a message and we'll get back to you within 24 hours.
                 </p>
               </div>
@@ -95,8 +95,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <Phone size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">Phone</div>
-                    <div className="text-[#F8F9F9] text-sm">+91 87925 47821</div>
+                    <div className="text-gray-600 text-xs uppercase tracking-wide mb-0.5">Phone</div>
+                    <div className="text-gray-900 text-sm">+91 87925 47821</div>
                   </div>
                 </a>
 
@@ -106,8 +106,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <Mail size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">Email</div>
-                    <div className="text-[#F8F9F9] text-sm break-all">kishakumar062006@gmail.com</div>
+                    <div className="text-gray-600 text-xs uppercase tracking-wide mb-0.5">Email</div>
+                    <div className="text-gray-900 text-sm break-all">kishakumar062006@gmail.com</div>
                   </div>
                 </a>
 
@@ -117,8 +117,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <Instagram size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">Instagram</div>
-                    <div className="text-[#F8F9F9] text-sm">@vyomstudio.in</div>
+                    <div className="text-gray-600 text-xs uppercase tracking-wide mb-0.5">Instagram</div>
+                    <div className="text-gray-900 text-sm">@vyomstudio.in</div>
                   </div>
                 </a>
 
@@ -128,8 +128,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                     <Linkedin size={16} className="text-[#0084FF]" />
                   </div>
                   <div>
-                    <div className="text-[#9496A1] text-xs uppercase tracking-wide mb-0.5">LinkedIn</div>
-                    <div className="text-[#F8F9F9] text-sm">VYOM Studio</div>
+                    <div className="text-gray-600 text-xs uppercase tracking-wide mb-0.5">LinkedIn</div>
+                    <div className="text-gray-900 text-sm">VYOM Studio</div>
                   </div>
                 </a>
               </div>
@@ -151,15 +151,15 @@ const handleSubmit = async (e: React.FormEvent) => {
             {/* Form */}
             <div className="lg:col-span-3">
               <div className="animate-on-scroll service-card p-8 lg:p-10">
-                <h3 className="font-display text-2xl font-bold text-[#F8F9F9] mb-8">Send Us a Message</h3>
+                <h3 className="font-display text-2xl font-bold text-gray-900 mb-8">Send Us a Message</h3>
 
                 {status === 'sent' ? (
                   <div className="text-center py-16">
                     <div className="w-14 h-14 bg-[#0084FF]/10 flex items-center justify-center mx-auto mb-4 rounded-xl">
                       <Send size={24} className="text-[#0084FF]" />
                     </div>
-                    <h4 className="font-display text-2xl font-bold text-[#F8F9F9] mb-2">Message Sent!</h4>
-                    <p className="text-[#9496A1] text-sm">We'll get back to you within 24 hours.</p>
+                    <h4 className="font-display text-2xl font-bold text-gray-900 mb-2">Message Sent!</h4>
+                    <p className="text-gray-600 text-sm">We'll get back to you within 24 hours.</p>
                     <button
                       onClick={() => { setStatus('idle'); setForm({ name: '', email: '', phone: '', service: '', message: '' }) }}
                       className="mt-6 text-sm text-[#0084FF] hover:underline"
@@ -171,7 +171,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Name *</label>
+                        <label className="text-gray-600 text-xs uppercase tracking-wide block mb-1.5">Name *</label>
                         <input
                           name="name"
                           value={form.name}
@@ -182,7 +182,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         />
                       </div>
                       <div>
-                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Email *</label>
+                        <label className="text-gray-600 text-xs uppercase tracking-wide block mb-1.5">Email *</label>
                         <input
                           name="email"
                           type="email"
@@ -197,7 +197,7 @@ const handleSubmit = async (e: React.FormEvent) => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Phone</label>
+                        <label className="text-gray-600 text-xs uppercase tracking-wide block mb-1.5">Phone</label>
                         <input
                           name="phone"
                           type="tel"
@@ -208,7 +208,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                         />
                       </div>
                       <div>
-                        <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Service Interested In</label>
+                        <label className="text-gray-600 text-xs uppercase tracking-wide block mb-1.5">Service Interested In</label>
                         <select
                           name="service"
                           value={form.service}
@@ -226,7 +226,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     </div>
 
                     <div>
-                      <label className="text-[#9496A1] text-xs uppercase tracking-wide block mb-1.5">Message *</label>
+                      <label className="text-gray-600 text-xs uppercase tracking-wide block mb-1.5">Message *</label>
                       <textarea
                         name="message"
                         value={form.message}

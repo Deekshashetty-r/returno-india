@@ -39,16 +39,16 @@ export default function ServicesPage() {
 
   return (
     <>
-      <section className="relative pt-36 pb-20 border-b border-white/[0.08] overflow-hidden">
-        <div className="glow-backdrop" />
+      <section className="relative pt-36 pb-20 border-b border-gray-200 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white pointer-events-none" />
         <div className="absolute right-0 top-0 w-96 h-96 bg-[#1E40AF] rounded-full opacity-[0.2] blur-[120px] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative">
           <span className="accent-line" />
-          <h1 className="font-display text-5xl lg:text-7xl font-bold text-[#F8F9F9] leading-tight mb-6">
+          <h1 className="font-display text-5xl lg:text-7xl font-bold text-gray-900 leading-tight mb-6">
             Services Built for <br />
             <span className="gradient-text">Real Growth</span>
           </h1>
-          <p className="text-[#9496A1] text-xl max-w-xl leading-relaxed">
+          <p className="text-gray-600 text-xl max-w-xl leading-relaxed">
             Four core pillars — branding, digital marketing, content creation, and web development — designed around one goal: meaningful, measurable growth.
           </p>
         </div>
@@ -67,18 +67,18 @@ export default function ServicesPage() {
                   <div className="w-12 h-12 bg-[#0084FF]/10 flex items-center justify-center mb-5 rounded-xl group-hover:bg-[#0084FF]/20 transition-colors">
                     <Icon size={20} className="text-[#0084FF]" />
                   </div>
-                  <h2 className="font-display text-2xl font-bold text-[#F8F9F9] mb-2">{title}</h2>
+                  <h2 className="font-display text-2xl font-bold text-gray-900 mb-2">{title}</h2>
                   <p className="text-[#0084FF] text-sm italic">{tagline}</p>
                 </div>
 
                 <div className="lg:col-span-1">
-                  <p className="text-[#9496A1] text-sm leading-relaxed">{desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
                 </div>
 
                 <div>
                   <ul className="space-y-2">
                     {features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm text-[#9496A1]">
+                      <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
                         <Check size={14} className="text-[#CCFF00] mt-0.5 flex-shrink-0" />
                         {f}
                       </li>
@@ -91,12 +91,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="section-pad bg-[#0a0a0c] border-t border-white/[0.08] text-center">
+      <section className="section-pad bg-gray-50 border-t border-gray-200 text-center">
         <div className="max-w-2xl mx-auto px-6">
-          <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-[#F8F9F9] mb-6">
+          <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Not Sure Where to Start?
           </h2>
-          <p className="animate-on-scroll delay-100 text-[#9496A1] mb-8">
+          <p className="animate-on-scroll delay-100 text-gray-600 mb-8">
             Get in touch and we&apos;ll help you figure out the right combination of services for your brand goals and budget.
           </p>
           <Link href="/contact" className="animate-on-scroll delay-200 btn-primary inline-flex">

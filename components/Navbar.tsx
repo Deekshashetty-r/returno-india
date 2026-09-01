@@ -27,16 +27,19 @@ export default function Navbar() {
 
   useEffect(() => setOpen(false), [pathname])
 
+  const isHome = pathname === '/';
+  const isLight = !isHome || scrolled;
+
   return (
     <header
       className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-4xl rounded-full ${
-        scrolled
-          ? 'bg-[#191929]/80 backdrop-blur-xl border border-white/10 shadow-xl'
-          : 'bg-[#191929]/40 backdrop-blur-md border border-white/10'
+        isLight
+          ? 'bg-white/80 backdrop-blur-xl border border-gray-200 shadow-lg'
+          : 'bg-[#191929]/20 backdrop-blur-md border border-white/10'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
-        <BrandLogo />
+        <BrandLogo theme={isLight ? 'light' : 'dark'} />
 
         <ul className="hidden md:flex items-center gap-8">
           {links.map(({ href, label }) => (
@@ -45,12 +48,12 @@ export default function Navbar() {
                 href={href}
                 className={`text-sm font-body tracking-wide transition-colors duration-200 ${
                   pathname === href
-                    ? 'text-[#F8F9F9]'
-                    : 'text-[#9496A1] hover:text-[#F8F9F9]'
+                    ? (isLight ? 'text-blue-600 font-semibold' : 'text-[#F8F9F9]')
+                    : (isLight ? 'text-gray-600 hover:text-gray-900' : 'text-[#9496A1] hover:text-[#F8F9F9]')
                 }`}
               >
                 {label}
-                {pathname === href && (
+                {pathname === href && !isLight && (
                   <span className="block h-px bg-[#0084FF] mt-0.5" />
                 )}
               </Link>
@@ -60,16 +63,20 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden md:inline-flex items-center gap-2 bg-white text-black rounded-full text-xs font-semibold py-2 px-3 pr-2 transition-transform hover:scale-105"
+          className={`hidden md:inline-flex items-center gap-2 rounded-full text-xs font-semibold py-2 px-3 pr-2 transition-transform hover:scale-105 ${
+            isLight ? 'bg-gray-900 text-white' : 'bg-white text-black'
+          }`}
         >
           Get in Touch
-          <span className="w-6 h-6 rounded-full bg-[#191929] text-white flex items-center justify-center">
+          <span className={`w-6 h-6 rounded-full flex items-center justify-center ${
+            isLight ? 'bg-white text-gray-900' : 'bg-[#191929] text-white'
+          }`}>
             ↗
           </span>
         </Link>
 
         <button
-          className="md:hidden text-[#F8F9F9] p-1"
+          className={`md:hidden p-1 ${isLight ? 'text-gray-900' : 'text-[#F8F9F9]'}`}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -78,7 +85,9 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden bg-[#191929]/95 backdrop-blur-xl rounded-2xl mt-2 border border-white/10 ${
+        className={`md:hidden transition-all duration-300 overflow-hidden backdrop-blur-xl rounded-2xl mt-2 border ${
+          isLight ? 'bg-white/95 border-gray-200 shadow-xl' : 'bg-[#191929]/95 border-white/10 shadow-xl'
+        } ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -87,8 +96,10 @@ export default function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`text-sm tracking-wide ${
-                  pathname === href ? 'text-[#F8F9F9]' : 'text-[#9496A1]'
+                className={`text-sm tracking-wide block ${
+                  pathname === href
+                    ? (isLight ? 'text-blue-600 font-semibold' : 'text-[#F8F9F9]')
+                    : (isLight ? 'text-gray-600' : 'text-[#9496A1]')
                 }`}
               >
                 {label}
@@ -96,7 +107,9 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <Link href="/contact" className="btn-primary text-xs py-2.5 px-5 mt-2 w-fit">
+            <Link href="/contact" className={`inline-flex text-xs py-2.5 px-6 mt-2 rounded-full font-semibold transition-transform hover:scale-105 ${
+              isLight ? 'bg-gray-900 text-white' : 'bg-white text-black'
+            }`}>
               Get in Touch
             </Link>
           </li>
