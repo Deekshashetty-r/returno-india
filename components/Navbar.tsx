@@ -29,10 +29,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-4xl rounded-full ${
         scrolled
-          ? 'bg-black/90 backdrop-blur-md border-b border-white/[0.08]'
-          : 'bg-transparent'
+          ? 'bg-[#191929]/80 backdrop-blur-xl border border-white/10 shadow-xl'
+          : 'bg-[#191929]/40 backdrop-blur-md border border-white/10'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
@@ -60,9 +60,12 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="hidden md:inline-flex btn-primary text-xs py-2.5 px-5"
+          className="hidden md:inline-flex items-center gap-2 bg-white text-black rounded-full text-xs font-semibold py-2 px-3 pr-2 transition-transform hover:scale-105"
         >
           Get in Touch
+          <span className="w-6 h-6 rounded-full bg-[#191929] text-white flex items-center justify-center">
+            ↗
+          </span>
         </Link>
 
         <button
@@ -75,7 +78,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden bg-[#121318] border-b border-white/[0.08] ${
+        className={`md:hidden transition-all duration-300 overflow-hidden bg-[#191929]/95 backdrop-blur-xl rounded-2xl mt-2 border border-white/10 ${
           open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >

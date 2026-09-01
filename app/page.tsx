@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { useScrollReveal } from '@/lib/useScrollReveal'
-import { ArrowRight, ChevronRight } from 'lucide-react'
+import { ArrowRight, ChevronRight, Camera, Clapperboard, Aperture, Star } from 'lucide-react'
 
 const pillars = [
   {
@@ -39,21 +39,30 @@ export default function HomePage() {
   return (
     <>
       <header className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="glow-backdrop" />
-        <div className="absolute inset-0 opacity-[0.04]"
+        <div className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: 'linear-gradient(rgba(248,249,249,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(248,249,249,0.4) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)',
             backgroundSize: '60px 60px'
           }}
         />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#1E40AF] rounded-full opacity-[0.18] blur-[140px] pointer-events-none" />
-        <div className="absolute top-24 right-1/4 w-[280px] h-[280px] bg-[#6745E7] rounded-full opacity-[0.12] blur-[100px] pointer-events-none" />
 
+        {/* Decorative Floating Elements */}
+        <div className="hidden lg:block absolute top-1/4 left-[10%] animate-float text-white/40 rotate-12" style={{ animationDelay: '0s' }}>
+          <Camera size={48} strokeWidth={1} />
+        </div>
+        <div className="hidden lg:block absolute bottom-1/4 left-[15%] animate-float text-white/30 -rotate-12" style={{ animationDelay: '2s' }}>
+          <Clapperboard size={56} strokeWidth={1} />
+        </div>
+        <div className="hidden lg:block absolute top-1/3 right-[12%] animate-float text-white/30 rotate-45" style={{ animationDelay: '1s' }}>
+          <Aperture size={64} strokeWidth={1} />
+        </div>
+        <div className="hidden lg:block absolute bottom-1/3 right-[20%] animate-float text-white/50 rotate-[20deg]" style={{ animationDelay: '3s' }}>
+          <Star size={32} strokeWidth={1.5} fill="currentColor" className="opacity-50" />
+        </div>
 
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20 text-center">
-          <h1 className="hero-title font-display text-4xl sm:text-6xl lg:text-8xl font-bold text-[#F8F9F9] leading-[1.05] tracking-tight mb-6 animate-fade-up mt-8">
-            VYOM <span className="gradient-text">Studio</span>
-            
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20 text-center z-10">
+          <h1 className="hero-title text-5xl sm:text-7xl lg:text-[7rem] font-bold text-white leading-[1.05] tracking-tight mb-6 animate-fade-up mt-8">
+            VYOM <span className="font-serif italic font-normal text-white">Studio</span>
           </h1>
 
      
@@ -63,32 +72,33 @@ export default function HomePage() {
           </span>
 
 
-          <p className="hero-subtitle text-[#9496A1] text-lg sm:text-xl max-w-2xl mx-auto mb-10 animate-fade-up font-body leading-relaxed"
+          <p className="hero-subtitle text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 animate-fade-up font-body leading-relaxed"
             style={{ animationDelay: '0.15s' }}>
             We transform progressive brands through high-impact branding, intelligent web solutions, and strategic content creation.
           </p>
 
           <div className="cta-group flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up"
             style={{ animationDelay: '0.25s' }}>
-            <Link href="/contact" className="btn btn-primary">
-              Start a Project ↗
+            <Link href="/contact" className="btn-primary">
+              Start a Project
+              <span className="icon-circle">↗</span>
             </Link>
-            <Link href="/services" className="btn btn-secondary">
-              Explore Services
+            <Link href="/services" className="btn-secondary">
+              Explore Services ↗
             </Link>
           </div>
         </div>
       </header>
 
-      <section className="section-pad border-t border-white/[0.08]">
+      <section className="section-pad border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="accent-line" />
-              <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-[#F8F9F9] leading-tight mb-6">
+              <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
                 We help brands go beyond — with strategy and craft.
               </h2>
-              <p className="animate-on-scroll delay-100 text-[#9496A1] text-base leading-relaxed mb-8">
+              <p className="animate-on-scroll delay-100 text-gray-600 text-base leading-relaxed mb-8">
                 VYOM Studio is a modern digital agency. We partner with progressive brands to build high-impact identity systems, growth campaigns, content, and web experiences that convert.
               </p>
               <Link href="/about" className="animate-on-scroll delay-200 btn-outline inline-flex">
@@ -104,10 +114,10 @@ export default function HomePage() {
               ].map((item, i) => (
                 <div
                   key={item.title}
-                  className={`animate-on-scroll delay-${(i + 1) * 100} service-card p-5`}
+                  className={`animate-on-scroll delay-${(i + 1) * 100} service-card p-5 bg-gray-50 border-gray-100`}
                 >
-                  <h4 className="text-[#F8F9F9] font-medium text-sm mb-2">{item.title}</h4>
-                  <p className="text-[#9496A1] text-xs leading-relaxed">{item.desc}</p>
+                  <h4 className="text-gray-900 font-semibold text-sm mb-2">{item.title}</h4>
+                  <p className="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -115,16 +125,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="services" className="section-pad bg-[#0a0a0c] border-t border-white/[0.08]">
+      <section id="services" className="section-pad bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
             <div>
               <span className="accent-line" />
-              <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-[#F8F9F9]">
+              <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-gray-900">
                 What We Do
               </h2>
             </div>
-            <Link href="/services" className="animate-on-scroll mt-6 md:mt-0 text-sm text-[#9496A1] hover:text-[#F8F9F9] transition-colors inline-flex items-center gap-2">
+            <Link href="/services" className="animate-on-scroll mt-6 md:mt-0 text-sm text-gray-600 hover:text-gray-900 transition-colors inline-flex items-center gap-2">
               All Services <ArrowRight size={14} />
             </Link>
           </div>
@@ -133,27 +143,27 @@ export default function HomePage() {
             {pillars.map(({ num, title, desc }, i) => (
               <div
                 key={title}
-                className={`animate-on-scroll delay-${(i % 4) * 100 + 100} service-card`}
+                className={`animate-on-scroll delay-${(i % 4) * 100 + 100} service-card bg-white border-gray-100`}
               >
                 <span className="service-num">{num}</span>
-                <h3 className="text-[#F8F9F9] font-display font-semibold text-xl mb-3">{title}</h3>
-                <p className="text-[#9496A1] text-sm leading-relaxed">{desc}</p>
+                <h3 className="text-gray-900 font-display font-semibold text-xl mb-3">{title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section-pad border-t border-white/[0.08]">
+      <section className="section-pad border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
             <div>
               <span className="accent-line" />
-              <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-[#F8F9F9]">
+              <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-gray-900">
                 Our Work
               </h2>
             </div>
-            <Link href="/portfolio" className="animate-on-scroll mt-6 md:mt-0 text-sm text-[#9496A1] hover:text-[#F8F9F9] transition-colors inline-flex items-center gap-2">
+            <Link href="/portfolio" className="animate-on-scroll mt-6 md:mt-0 text-sm text-gray-600 hover:text-gray-900 transition-colors inline-flex items-center gap-2">
               View All <ArrowRight size={14} />
             </Link>
           </div>
@@ -161,7 +171,7 @@ export default function HomePage() {
             {portfolioItems.map(({ label, category, type, src }, i) => (
               <div
                 key={label + src}
-                className={`animate-on-scroll delay-${(i % 3) * 100 + 100} border border-white/[0.08] rounded-2xl aspect-[4/3] relative overflow-hidden group card-hover cursor-pointer bg-[#121318]`}
+                className={`animate-on-scroll delay-${(i % 3) * 100 + 100} border border-gray-200 rounded-2xl aspect-[4/3] relative overflow-hidden group hover:shadow-xl transition-shadow cursor-pointer bg-gray-100`}
               >
                 {type === 'video' ? (
                   <video
@@ -190,10 +200,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section-pad bg-[#0a0a0c] border-t border-white/[0.08]">
+      <section className="section-pad bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <span className="accent-line" />
-          <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-[#F8F9F9] mb-14">
+          <h2 className="animate-on-scroll font-display text-4xl lg:text-5xl font-bold text-gray-900 mb-14">
             Why VYOM Studio
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -209,12 +219,12 @@ export default function HomePage() {
                 key={num}
                 className={`animate-on-scroll delay-${(i % 3) * 100 + 100} flex gap-5`}
               >
-                <span className="font-display text-5xl font-bold text-[#0084FF]/20 leading-none select-none flex-shrink-0">
+                <span className="font-display text-5xl font-bold text-[#4b54e3]/10 leading-none select-none flex-shrink-0">
                   {num}
                 </span>
                 <div>
-                  <h3 className="text-[#F8F9F9] font-medium mb-2">{title}</h3>
-                  <p className="text-[#9496A1] text-sm leading-relaxed">{desc}</p>
+                  <h3 className="text-gray-900 font-semibold mb-2">{title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
                 </div>
               </div>
             ))}
@@ -222,21 +232,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="section-pad border-t border-white/[0.08]">
+      <section id="contact" className="section-pad border-t border-gray-100 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="bg-[#121318] border border-white/[0.08] rounded-2xl p-10 lg:p-20 text-center relative overflow-hidden">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-1 bg-gradient-to-r from-transparent via-[#0084FF] to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(0,132,255,0.12),transparent_70%)] pointer-events-none" />
+          <div className="bg-gradient-to-br from-[#1a1744] to-[#3a358c] rounded-3xl p-10 lg:p-20 text-center relative overflow-hidden shadow-2xl">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-1 bg-gradient-to-r from-transparent via-[#818cf8] to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.1),transparent_70%)] pointer-events-none" />
 
-            <h2 className="animate-on-scroll font-display text-4xl lg:text-6xl font-bold text-[#F8F9F9] mb-6 relative">
+            <h2 className="animate-on-scroll font-display text-4xl lg:text-6xl font-bold text-white mb-6 relative">
               Ready to Go Beyond?
             </h2>
-            <p className="animate-on-scroll delay-100 text-[#9496A1] text-lg max-w-lg mx-auto mb-10 relative">
+            <p className="animate-on-scroll delay-100 text-white/80 text-lg max-w-lg mx-auto mb-10 relative">
               Let&apos;s talk about how VYOM Studio can help you build a stronger brand, sharper digital presence, and experiences that convert.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll delay-200 relative">
               <Link href="/contact" className="btn-primary">
-                Start a Project ↗
+                Start a Project <span className="icon-circle">↗</span>
               </Link>
               <a
                 href="https://wa.me/918792547821?text=Hi%20VYOM%20Studio%2C%20I%27m%20interested%20in%20your%20services."
